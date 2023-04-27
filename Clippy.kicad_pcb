@@ -350,6 +350,11 @@
         )
       )
     )
+    (model "C:/Users/jayde/Downloads/tiny_2040 v74.step"
+      (offset (xyz 9 -1.25 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (footprint "MountingHole:MountingHole_1.152mm" (layer "F.Cu")
