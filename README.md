@@ -26,6 +26,14 @@ If people actually like and use this thing I might put together a Seeed XIAO RP2
 # Firmware
 This board is meant for use with KMK or QMK. I will provide ready-to-use KMK files at a later date, so keep an eye on this section. An OLED display will also be supported. Instructions will be updated here when ready!
 
+## Required CircuitPython libraries
+CircuitPython libraries can be found [here.](https://circuitpython.org/libraries)  
+This project will require the following libraries from the "lib" folder of the library bundle:
+* neopixel.mpy
+* adafruit_displayio_ssd1306.mpy (required for OLED)
+* adafruit_display_text (required for OLED)  
+Copy these files and folders into the "lib" folder on your CIRCUITPY drive.
+
 # Credits
 * [Tiny2040 Symbol & Footprint](https://github.com/chinatsu/tiny2040) by [chinatsu](https://github.com/chinatsu) - Licensed under Creative Commons Attribution-ShareAlike 3.0 Unported. License can be found in `rp2040` directory. The following changes were made to the pcbnew footprint for this project:
     * "U1" and "Tiny2040" text on silkscreen layer have been moved
