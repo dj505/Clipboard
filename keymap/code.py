@@ -13,9 +13,18 @@ from kmk.extensions.peg_oled_Display import Oled,OledDisplayMode,OledReactionTyp
 
 keyboard = KMKKeyboard()
 
-encoder_handler = EncoderHandler()
+keyboard.col_pins = (board.GP1, board.GP0)
+keyboard.row_pins = (board.GP6, board.GP7)
+keyboard.diode_orientation = DiodeOrientation.COL2ROW
+
 layers = Layers()
-mediakeys = MediaKeys()
+encoder_handler = EncoderHandler()
+encoder_handler.pins = (board.GP4, board.GP5, None)
+keyboard.modules = [layers, encoder_handler]
+
+media_keys = MediaKeys()
+keyboard.extensions.append(media_keys)
+
 frontglow = RGB(
     pixel_pin=board.GP3,
     num_pixels=3,
@@ -23,7 +32,10 @@ frontglow = RGB(
     val_default=25,
     animation_mode=AnimationModes.RAINBOW,
 )
+keyboard.extensions.append(frontglow)
 
+keyboard.SCL = board.GP27
+keyboard.SDA = board.GP26
 oled_ext = Oled(
     OledData(
         corner_one={0:OledReactionType.LAYER,1:["LYR 1","LYR 2"]},
@@ -32,22 +44,13 @@ oled_ext = Oled(
         corner_four={0:OledReactionType.LAYER,1:["PASTE","ALTPRNT"]},
     ),
     oWidth=128,
-    oHeight=64,
+    oHeight=64,	
     toDisplay=OledDisplayMode.TXT,
     flip=False
 )
-
-keyboard.modules = [layers, encoder_handler]
-keyboard.extensions = [statusLED, oled_ext, mediakeys, frontglow]
-
-keyboard.col_pins = (board.GP1, board.GP0)
-keyboard.row_pins = (board.GP6, board.GP7)
-keyboard.diode_orientation = DiodeOrientation.COL2ROW
+keyboard.extensions.append(oled_ext)
 
 keyboard.debug_enabled = True
-
-keyboard.SCL = board.GP27
-keyboard.SDA = board.GP26
 
 keyboard.keymap = [
     [   # Layer 1
@@ -62,12 +65,11 @@ keyboard.keymap = [
 
 ]
 
-encoder_handler.pins = ((board.GP4, board.GP5, None))
-
 encoder_handler.map = [
-    (( KC.VOLD,            KC.VOLU)),            # Layer 1 (Volume down, volume up)
-    (( KC.LCTRL(KC.EQUAL), KC.LCTRL(KC.MINUS) )) # Layer 2 (Ctrl +, Ctrl -)
+    [( KC.VOLD,            KC.VOLU)],            # Layer 1 (Volume down, volume up)
+    [( KC.LCTRL(KC.EQUAL), KC.LCTRL(KC.MINUS) )] # Layer 2 (Ctrl +, Ctrl -)
 ]
 
 if __name__ == '__main__':
     keyboard.go()
+
