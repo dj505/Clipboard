@@ -99,23 +99,6 @@ oled_ext = Oled(
 )
 keyboard.extensions.append(oled_ext)
 
-class LEDLockStatus(LockStatus):
-    def set_lock_leds(self):
-        if self.get_caps_lock():
-            leds.set_brightness(50, leds=[0])
-        else:
-            leds.set_brightness(0, leds=[0])
-
-        if self.get_scroll_lock():
-            leds.set_brightness(50, leds=[1])
-        else:
-            leds.set_brightness(0, leds=[1])
-
-    def after_hid_send(self, sandbox):
-        super().after_hid_send(sandbox) # Critically important. Do not forget
-        if self.report_updated:
-            self.set_lock_leds()
-
 leds = LED(led_pin=[board.LED_R, board.LED_G, board.LED_B])
 # Num lock = red
 # Caps lock = green
