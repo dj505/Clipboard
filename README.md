@@ -1,6 +1,6 @@
 # Clipboard
 A macropad made to make copy/paste easier  
-![Fully assembled Clipboard](/Photos/Clipboard.png "Clipboard")
+![Fully assembled Clipboard](/Photos/Clipboard.jpg "Clipboard")
 
 ## Isn't this basically just a small macropad?
 Yes! There's no reason you have to use this exclusively for copy/pasting, or other common shortcuts. You can do whatever you want with it, really. I was comissioned to design this by a friend who does a lot of copy/pasting at work. As he would like to save himself from a perpetually sore wrist, it was designed to the specifications he provided, right down to the specific intended use case. Since it's meant to be used for copying and pasting in an office-like environment, "Clipboard" just so happened to be a good play on words. (Shoutouts to clue for pointing that out!)
