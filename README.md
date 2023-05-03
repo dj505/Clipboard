@@ -1,5 +1,6 @@
 # Clipboard
-A macropad made to make copy/paste easier
+A macropad made to make copy/paste easier  
+![Fully assembled Clipboard](/Photos/Clipboard.png "Clipboard")
 
 ## Isn't this basically just a small macropad?
 Yes! There's no reason you have to use this exclusively for copy/pasting, or other common shortcuts. You can do whatever you want with it, really. I was comissioned to design this by a friend who does a lot of copy/pasting at work. As he would like to save himself from a perpetually sore wrist, it was designed to the specifications he provided, right down to the specific intended use case. Since it's meant to be used for copying and pasting in an office-like environment, "Clipboard" just so happened to be a good play on words. (Shoutouts to clue for pointing that out!)
@@ -24,7 +25,11 @@ If people actually like and use this thing I might put together a Seeed XIAO RP2
 | SN74LV1T34DBV    | SOT-23-5          | 1   |
 
 # Firmware
-This board is meant for use with KMK or QMK. I will provide ready-to-use KMK files at a later date, so keep an eye on this section. An OLED display will also be supported. Instructions will be updated here when ready!
+This board was developed using [KMK Firmware](https://github.com/KMKfw/kmk_firmware). Instructions for setting up KMK on your board can be found in the [Getting Started](https://github.com/KMKfw/kmk_firmware/blob/master/docs/en/Getting_Started.md) docs.
+
+After KMK itself is set up, delete the existing `code.py` or `main.py` on the CIRCUITPY drive, and copy the `code.py` file in this repository's "keymap" directory to the root of the drive.
+
+You're done!
 
 ## Required CircuitPython libraries
 CircuitPython libraries can be found [here.](https://circuitpython.org/libraries)  
@@ -33,6 +38,9 @@ This project will require the following libraries from the "lib" folder of the l
 * adafruit_displayio_ssd1306.mpy (required for OLED)
 * adafruit_display_text (required for OLED)  
 Copy these files and folders into the "lib" folder on your CIRCUITPY drive.
+
+## Connecting an OLED display
+Clipboard is made with an I2C 128x64 SSD1306 OLED display in mind. If you have a different display with a different resolution, you will have to edit `code.py` accordingly. The underside of the board has the appropriate pins marked, with **SDA on GP26** and **SCL on GP27**. The VCC (or VDD (or 3.3V)) pin on the OLED should be wired to the +3V3 pin on the Clipboard. 
 
 # Credits
 * [Tiny2040 Symbol & Footprint](https://github.com/chinatsu/tiny2040) by [chinatsu](https://github.com/chinatsu) - Licensed under Creative Commons Attribution-ShareAlike 3.0 Unported. License can be found in `rp2040` directory. The following changes were made to the pcbnew footprint for this project:

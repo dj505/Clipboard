@@ -4,6 +4,6 @@ Designator,Footprint,Quantity,Value,LCSC Part #
 J1,PinHeader_1x08_P2.54mm_Vertical,1,Conn_01x08,
 "LED1, LED2, LED3",LED_MX_6028R,3,SK6812MINI-E,
 "MX1, MX2, MX3",MX-Hotswap-1U,3,MX-NoLED,
-SW1,RotaryEncoder_Bourns_Vertical_PEC12R-3xxxF-Sxxxx,1,PEC11R-4215F-S0024,
+SW1,RotaryEncoder_Bourns_Vertical_PEC12R-3xxxF-Sxxxx,1,PEC12R-4215F-S0024,
 U1,tiny2040,1,tiny2040,
 U2,SOT-23-5,1,SN74LV1T34DBV,C100024
