@@ -40,7 +40,7 @@ This project will require the following libraries from the "lib" folder of the l
 Copy these files and folders into the "lib" folder on your CIRCUITPY drive.
 
 ## Connecting an OLED display
-Clipboard is made with an I2C 128x64 SSD1306 OLED display in mind. If you have a different display with a different resolution, you will have to edit `code.py` accordingly. The underside of the board has the appropriate pins marked, with **SDA on GP26** and **SCL on GP27**. The VCC (or VDD (or 3.3V)) pin on the OLED should be wired to the +3V3 pin on the Clipboard. 
+Clipboard is made with an I2C 128x64 SSD1306 OLED display in mind. If you have a different display with a different resolution, you will have to edit `code.py` accordingly. The underside of the board has the appropriate pins marked, with **SDA on GP26** and **SCL on GP27**. The VCC (or VDD (or 3.3V)) pin on the OLED should be wired to the +3V3 pin on the Clipboard.
 
 # Credits
 * [Tiny2040 Symbol & Footprint](https://github.com/chinatsu/tiny2040) by [chinatsu](https://github.com/chinatsu) - Licensed under Creative Commons Attribution-ShareAlike 3.0 Unported. License can be found in `rp2040` directory. The following changes were made to the pcbnew footprint for this project:
