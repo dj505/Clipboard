@@ -31,6 +31,10 @@ After KMK itself is set up, delete the existing `code.py` or `main.py` on the CI
 
 You're done!
 
+## Notes on the firmware
+- By default, it does a lot. Maybe too much. *Probably* too much, actually. Please feel free to edit it down for your own use case! The [KMK docs](http://kmkfw.io/docs/) are your friend.
+- The OLED code used here is currently undocumented. It's fully reworked from example code I found on a GitHub issue thread that I can't seem to find again. It should be straightforward enough to understand, though!
+
 ## Required CircuitPython libraries
 CircuitPython libraries can be found [here.](https://circuitpython.org/libraries)  
 This project will require the following libraries from the "lib" folder of the library bundle:
