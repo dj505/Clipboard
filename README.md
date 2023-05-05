@@ -10,7 +10,8 @@ Short answer: Because I already have the parts lol
 
 Long answer: To keep costs down, the deisgn was made to use parts we (myself and the friend who commissioned this board) already own. We both have a spare Tiny2040, I have hundreds of 1N4148 diodes from making keyboards, and I also have tons of leftover Kailh sockets and SK6812MINI-Es from the initial run of the [PicoLX](https://github.com/dj505/PicoLX).
 
-If people actually like and use this thing I might put together a Seeed XIAO RP2040 version to keep costs down, as it has an extremely similar form factor and costs a little less.
+## Update: [RP2040-Zero branch available here!](https://github.com/dj505/clipboard/tree/rp2040-zero)
+The RP2040 Zero is significantly cheaper and has a near-identical pinout. Some pins remain unused but you can solder straight to the pins if you want to add any extra peripherals.
 
 # Bill of Materials
 
