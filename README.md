@@ -5,12 +5,8 @@ A macropad made to make copy/paste easier
 ## Isn't this basically just a small macropad?
 Yes! There's no reason you have to use this exclusively for copy/pasting, or other common shortcuts. You can do whatever you want with it, really. I was comissioned to design this by a friend who does a lot of copy/pasting at work. As he would like to save himself from a perpetually sore wrist, it was designed to the specifications he provided, right down to the specific intended use case. Since it's meant to be used for copying and pasting in an office-like environment, "Clipboard" just so happened to be a good play on words. (Shoutouts to clue for pointing that out!)
 
-## Ok but what about the components?? The Tiny2040 is like $15 alone!
-Short answer: Because I already have the parts lol
-
-Long answer: To keep costs down, the deisgn was made to use parts we (myself and the friend who commissioned this board) already own. We both have a spare Tiny2040, I have hundreds of 1N4148 diodes from making keyboards, and I also have tons of leftover Kailh sockets and SK6812MINI-Es from the initial run of the [PicoLX](https://github.com/dj505/PicoLX).
-
-If people actually like and use this thing I might put together a Seeed XIAO RP2040 version to keep costs down, as it has an extremely similar form factor and costs a little less.
+## RP2040-Zero Branch
+The RP2040 Zero is significantly cheaper than the Tiny2040 and has more IO. Those extra pins aren't connected on the PCB itself, but you can solder wires to them easily enough if you want to add extra peripherals to the Clipboard. The firmware should also work without any changes as the pinout is nearly identical!
 
 # Bill of Materials
 
