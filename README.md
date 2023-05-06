@@ -17,7 +17,7 @@ The RP2040 Zero is significantly cheaper than the Tiny2040 and has more IO. Thos
 | SK6812MINI-E     | MINI-E            | 3   |
 | Keyboard Switch  | MX-style          | 3   |
 | Rotary Encoder   | PEC12R-4215F-S0024| 1   |
-| Pimoroni Tiny2040| N/A               | 1   |
+| RP2040-Zero      | N/A               | 1   |
 | SN74LV1T34DBV    | SOT-23-5          | 1   |
 
 # Firmware
